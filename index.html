@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Таблица треннировок ФК Зелёная околица</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+      <button type="button" class="tournament-form__button-clear">
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none">
+          <path d="M20.8487 1.37761e-06L0 20.8487L2.15131 23L23 2.15131L20.8487 1.37761e-06Z" fill="rgb(230, 59, 68)"></path>
+          <path d="M2.15131 0L0 2.15131L20.8487 23L23 20.8487L2.15131 0Z" fill="rgb(230, 59, 68)"></path>
+        </svg>
+      </button>
+        <div class="header__wrapper container">
+            <div class="header__logo-wrapper">
+                <img src="image/logo.jpg" alt="ФК Зелёная околица" width="90">
+            </div>
+            <h1 class="header__title">Таблица тренировок</h1>
+        </div>
+    </header>
+    <main>
+        <section class="tournament container">
+            <h2 class="tournament__title">Ввод результатов матча</h2>
+            <form class="tournament__form" action="https://echo.htmlacademy.ru">
+                <div class="tournament__home-team-score">
+                    <div>
+                        <select class="tournament-form__team-name_home tournament-form__team-name">
+                            <option disabled="" selected="">Выберите команду</option>
+                            <option>Лимоны</option>
+                            <option>Апельсины</option>
+                            <option>Баклажаны</option>
+                        </select>
+                        <select class="tournament-form__input tournament-form__input_home-score" name="gol_home" value="0">
+                            <option selected="">0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- <br> -->
+                <div class="tournament__separator">Против</div>
+                <div>
+                    <select class="tournament-form__team-name tournament-form__team-name_visitor">
+                        <option disabled="" selected="">Выберите команду</option>
+                        <option>Лимоны</option>
+                        <option>Апельсины</option>
+                        <option>Баклажаны</option>
+                    </select>
+                    <select type="tel" class="tournament-form__input tournament-form__input_visitor-score" name="gol_visitor" value="0">
+                        <option selected="">0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                    </select>
+                </div>
+                <button type="submit" class="button tournament-form__button-add-result">Добавить результат</button>
+            </form>
+        </section>
+
+        <section class="tournament-wrapper">
+            <h2 class="tournament-wrapper__title">Итоговая таблица дня</h2>
+            <table class="tournament-table">
+                <tr class="tournament-table__title-string">
+                    <th class="tournament-table__title-cell">М</th>
+                    <th class="tournament-table__title-cell">Команда</th>
+                    <th class="tournament-table__title-cell">О</th>
+                    <th class="tournament-table__title-cell">И</th>
+                    <th class="tournament-table__title-cell">Пб</th>
+                    <th class="tournament-table__title-cell">Пр</th>
+                    <th class="tournament-table__title-cell">Н</th>
+                    <th class="tournament-table__title-cell tournament-table__cell_scored">ГЗ</th>
+                    <th class="tournament-table__title-cell tournament-table__cell_conceded">ГП</th>
+                    <th class="tournament-table__title-cell tournament-table__cell_difference">РГ</th>
+                </tr>
+                <tr class="tournament-table__string" id="first" data-team="Лимоны">
+                    <td class="tournament-table__cell tournament-table__cell_place">1</td>
+                    <td class="tournament-table__cell tournament-table__cell_name">Лимоны</td>
+                    <td class="tournament-table__cell tournament-table__cell_points">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_matches">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_wins">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_loss">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_draws">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_scored">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_conceded">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_difference">0</td>
+                </tr>
+                <tr class="tournament-table__string" id="second" data-team="Апельсины">
+                    <td class="tournament-table__cell tournament-table__cell_place">2</td>
+                    <td class="tournament-table__cell tournament-table__cell_name">Апельсины</td>
+                    <td class="tournament-table__cell tournament-table__cell_points">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_matches">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_wins">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_loss">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_draws">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_scored">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_conceded">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_difference">0</td>
+                </tr>
+                <tr class="tournament-table__string" id="third" data-team="Баклажаны">
+                    <td class="tournament-table__cell tournament-table__cell_place">3</td>
+                    <td class="tournament-table__cell tournament-table__cell_name">Баклажаны</td>
+                    <td class="tournament-table__cell tournament-table__cell_points">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_matches">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_wins">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_loss">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_draws">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_scored">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_conceded">0</td>
+                    <td class="tournament-table__cell tournament-table__cell_difference">0</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <section class="games">
+
+        </section>
+    </footer>
+
+    <!-- Шаблон результаты матчей -->
+  <template id="results">
+      <div class="game-result container">
+          <div class="game-result__home">
+              Хозяева
+          </div>
+          <div class="game-result__score">
+            <span class="game-result__home-goal">0</span> - <span class="game-result__visitors-goal">0</span>
+          </div>
+          <div class="game-result__visitors">
+              Гости
+          </div>
+      </div>
+  </template>
+
+    <script src="./js/form.js"></script>
+
+</body>
+
+</html>
