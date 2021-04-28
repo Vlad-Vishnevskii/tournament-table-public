@@ -149,6 +149,7 @@ const fillGameResult = function (home, visitor) {
 
     fragment.appendChild(gameElement);
     gameContainer.appendChild(fragment);
+    buttonResult.disabled = true;
     saveElement(gameContainer, 'hiDen-result');
 }
 
@@ -193,7 +194,13 @@ const placeChecker = function () {
 }
 
 const validation = function () {
-    if (homeTeamName.value === visitorTeamName.value) {
+  const selNumHome = homeTeamName.selectedIndex;
+  const selNumVisitor = visitorTeamName.selectedIndex;
+
+  console.log(selNumHome)
+  console.log(selNumVisitor)
+
+    if (selNumHome === 0 || selNumVisitor === 0 || selNumHome === selNumVisitor) {
         buttonResult.disabled = true;
     }
     else {
